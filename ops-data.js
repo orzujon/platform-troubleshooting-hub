@@ -736,11 +736,11 @@ window.OpsData = {
       "name": "Mystery process on port 8080",
       "domain": "Linux",
       "difficulty": "Beginner",
-      "report": "Customer calls 192.168.112.129:8080 and receives Connection refused. You do not know the application name.",
+      "report": "Customer calls 192.0.2.10:8080 and receives Connection refused. You do not know the application name.",
       "output": "sudo ss -lntp\nLISTEN 127.0.0.1:8080 users:((\"python3\",pid=2863,fd=3))\nsystemctl list-units --type=service --state=running\n... lab-web.service active running",
       "ask": "Why can the service be active yet unavailable via the VM IP?",
       "hints": [
-        "Compare 127.0.0.1 against 192.168.112.129.",
+        "Compare 127.0.0.1 against 192.0.2.10.",
         "Listener binding limits which interface accepts traffic."
       ],
       "solution": "Python listens only on the VM's loopback interface. A remote connection to VM-IP:8080 does not reach that listener. Diagnose exposure and security requirements before changing the bind address.",
