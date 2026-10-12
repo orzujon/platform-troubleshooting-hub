@@ -1,0 +1,23 @@
+name: OpsField quality checks
+on:
+  push:
+    branches: [main, 'feat/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: |
+          node --check ops-app.js
+          node --check ops-data.js
+          node --check sw.js
+      - name: Run smoke tests
+        run: node tests/smoke.test.cjs
