@@ -13,7 +13,7 @@ const examples={
 'sudo ss -lntp':'LISTEN 0 5 127.0.0.1:8080 0.0.0.0:* users:(("python3",pid=2863,fd=3))',
 'systemctl --failed':'0 loaded units listed.  (Healthy systemd does not prove app availability.)',
 'systemctl status SERVICE --no-pager':'Active: failed (Result: exit-code)\nProcess: 123 ExecStart=/invalid/bin (code=exited, status=203/EXEC)',
-'ip -br addr':'lo UNKNOWN 127.0.0.1/8\nens33 UP 192.168.112.129/24',
+'ip -br addr':'lo UNKNOWN 127.0.0.1/8\nens33 UP 192.0.2.10/24',
 'free -h':'Mem: total 1.6Gi used 462Mi available 1.1Gi',
 'df -h':'Filesystem Size Used Avail Use% Mounted on\n/dev/sdb1 8.0G 8.0G 0 100% /var',
 'kubectl get pods -A -o wide':'NAMESPACE NAME READY STATUS RESTARTS\npayments api-7f49 0/1 CrashLoopBackOff 6',
