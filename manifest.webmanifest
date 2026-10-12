@@ -1,0 +1,18 @@
+{
+  "name": "OpsField — Incident Response Workbench",
+  "short_name": "OpsField",
+  "description": "Interactive platform engineering incident response and interview reference",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a1120",
+  "theme_color": "#0a1120",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
